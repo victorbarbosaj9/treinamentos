@@ -1,5 +1,5 @@
 /* Hallmark · shape: Front page in ruled sections (swapped from Bento Grid: the library had no photograph on the subject) · genre: editorial · theme: Newsprint (deal 3/3, seed para-germano-treinamentos-seguran-4ed0·6e91555f·2026-11-12·r0) · job: hire · draw: 587021
- * hero: Index · nav: masthead · footer: colophon block · imagery: none, the client's seal only · signature: the 16 brigadistas set at graphic scale beside the story of the Juiz de Fora event
+ * hero: Index · nav: masthead · footer: colophon block · imagery: photographs, the client's own 1, mono · signature: the 16 brigadistas set at graphic scale beside the story of the Juiz de Fora event
  * axes: light/slab-serif/warm · posture: restrained · contrast: pass · fold: pass · v2.0.0 */
 /* Hallmark · pre-emit critique: P4 H4 E4 S4 R4 V4 · weakest: H, a hero with no picture leans on the list, so the list is set at title size on its own ruled column */
 /* Hallmark · waive 42 · masthead nav and colophon footer chosen over the drawn search bar and index columns · a one page site for Germano has nothing to search and no sitemap */
@@ -47,7 +47,10 @@ a.skip:not(.btn) { color: var(--color-paper); }
 
 /* the event */
 .event { padding-block: var(--space-xl) var(--section-gap); }
-.dateline { margin-top: var(--space-sm); font-size: var(--text-sm); font-weight: 500; color: var(--color-muted); }
+.event__photo { margin: var(--space-xl) 0 0; }
+.photo { aspect-ratio: 2 / 1; border: var(--rule-hair) solid var(--color-rule); }
+.photo > img { object-position: 50% 78%; }
+.event__photo figcaption { padding-top: var(--space-xs); font-size: var(--text-sm); font-weight: 500; color: var(--color-muted); }
 .event__grid { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: var(--gap-columns); align-items: start; margin-top: var(--space-2xl); }
 .event__figure { display: grid; gap: var(--space-md); }
 .event__figure b { font: 700 clamp(9rem, 20vw, 19rem)/0.78 var(--font-display); letter-spacing: -0.04em; color: var(--color-ink); }
@@ -125,4 +128,5 @@ a.skip:not(.btn) { color: var(--color-paper); }
   .rows > div { grid-template-columns: minmax(0, 1fr); gap: var(--space-xs); }
   .cols { font-size: var(--text-md); text-align: left; }
   .event__figure b { font-size: 7.5rem; }
+  .photo { aspect-ratio: 4 / 3; }
 }
