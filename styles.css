@@ -11,9 +11,9 @@
 .btn:active { transform: translateY(1px); }
 .btn:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
 .btn[aria-disabled="true"] { opacity: 0.55; cursor: not-allowed; transform: none; }
-.btn--primary { background: var(--color-ink); color: var(--color-paper); }
-.btn--primary:hover { background: var(--color-ink-2); }
-.btn--secondary { border-block: var(--rule-hair) solid var(--color-ink); color: var(--color-ink); }
+.btn--primary { background: var(--color-accent); color: var(--color-accent-ink); }
+.btn--primary:hover { background: var(--color-accent-2); }
+.btn--secondary { border-block: var(--rule-hair) solid var(--color-accent); color: var(--color-ink); }
 .btn--secondary:hover { background: var(--color-paper-2); }
 .btn--reverse { background: var(--color-paper); color: var(--color-ink); }
 .btn--reverse:hover { background: var(--color-paper-3); }
@@ -53,7 +53,7 @@ a.skip:not(.btn) { color: var(--color-paper); }
 .event__photo figcaption { padding-top: var(--space-xs); font-size: var(--text-sm); font-weight: 500; color: var(--color-muted); }
 .event__grid { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: var(--gap-columns); align-items: start; margin-top: var(--space-2xl); }
 .event__figure { display: grid; gap: var(--space-md); }
-.event__figure b { font: 700 clamp(9rem, 20vw, 19rem)/0.78 var(--font-display); letter-spacing: -0.04em; color: var(--color-ink); }
+.event__figure b { font: 700 clamp(9rem, 20vw, 19rem)/0.78 var(--font-display); letter-spacing: -0.04em; color: var(--color-accent); }
 .event__figure span { max-width: 14ch; font: 700 var(--text-title)/1.2 var(--font-display); letter-spacing: var(--tracking-display); }
 .event__story { padding-left: var(--gap-columns); border-left: var(--rule-hair) solid var(--color-rule); }
 .cols { margin-top: var(--space-xl); columns: 2 18rem; column-gap: var(--space-xl); column-rule: var(--rule-hair) solid var(--color-rule); font-size: var(--text-lg); line-height: 1.5; text-align: justify; hyphens: auto; }
@@ -73,7 +73,7 @@ a.skip:not(.btn) { color: var(--color-paper); }
 
 /* the motto, on the second paper */
 .motto { padding-block: var(--section-gap-s); background: var(--color-paper-2); border-block: var(--rule-hair) solid var(--color-rule); }
-.motto__line { max-width: 18ch; font: 700 clamp(2.75rem, 8.2vw, 7.75rem)/1.02 var(--font-display); letter-spacing: var(--tracking-display); text-wrap: balance; }
+.motto__line { max-width: 18ch; color: var(--color-accent-2); font: 700 clamp(2.75rem, 8.2vw, 7.75rem)/1.02 var(--font-display); letter-spacing: var(--tracking-display); text-wrap: balance; }
 .motto__by { margin-top: var(--space-lg); font-size: var(--text-lead); color: var(--color-ink-2); }
 
 /* how it works, as a box score in words */
@@ -85,15 +85,16 @@ a.skip:not(.btn) { color: var(--color-paper); }
 .values h3 { font-size: var(--text-display-s); line-height: 1; }
 .values p { margin-top: var(--space-md); max-width: 30ch; font-size: var(--text-lg); line-height: 1.45; color: var(--color-ink-2); }
 
-/* the ink band */
-.contact { padding-block: var(--section-gap-s); background: var(--color-ink); color: var(--color-paper); }
+/* the gold band */
+.contact { padding-block: var(--section-gap-s); background: var(--color-accent); color: var(--color-paper); }
+.contact .btn--reverse { color: var(--color-ink); }
 .contact__grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--gap-columns); align-items: center; }
 .contact .lead { margin-top: var(--space-lg); max-width: 36ch; color: var(--color-paper-3); }
 .contact .btn { margin-top: var(--space-xl); }
 .rows--ink { border-top-color: var(--color-paper-3); }
-.rows--ink > div { border-bottom-color: var(--color-muted); }
+.rows--ink > div { border-bottom-color: color-mix(in oklab, var(--color-paper) 45%, transparent); }
 .rows--ink dd { color: var(--color-paper); }
-.contact a:not(.btn) { color: var(--color-paper); text-decoration-color: var(--color-accent); text-decoration-thickness: 2px; }
+.contact a:not(.btn) { color: var(--color-paper); text-decoration-color: var(--color-paper); text-decoration-thickness: 2px; }
 .contact a:focus-visible { outline-color: var(--color-paper); }
 .contact .fill { color: var(--color-paper-3); border-color: var(--color-paper-3); }
 
